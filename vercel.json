@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/habitaciones",
+      "destination": "/habitaciones.html"
+    },
+    {
+      "source": "/entorno",
+      "destination": "/entorno.html"
+    }
+  ]
+}
+
