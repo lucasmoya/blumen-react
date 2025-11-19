@@ -38,7 +38,9 @@ const Footer = () => {
               </div>
               <div className="copyright">
                 <span>Powered by</span>
-                <img src="/protolab-logo.png" alt="Protolab Logo" />
+                <a href="https://protolab.cl" target="_blank" rel="noopener noreferrer">
+                  <img src="/protolab-logo.png" alt="Protolab Logo" />
+                </a>
               </div>
             </div>
           </div>
