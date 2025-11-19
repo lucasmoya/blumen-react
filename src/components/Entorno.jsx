@@ -8,6 +8,14 @@ import SEO from './SEO'
 const Entorno = () => {
   const [isLoading, setIsLoading] = useState(true)
 
+  // Scroll al top cuando se monta el componente (sin animación)
+  useEffect(() => {
+    // Establecer directamente sin animación
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    window.scrollTo(0, 0)
+  }, [])
+
   useEffect(() => {
     const loadImages = (urls) => {
       return Promise.all(

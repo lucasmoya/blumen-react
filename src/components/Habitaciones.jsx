@@ -14,6 +14,14 @@ const Habitaciones = () => {
   const [isBeginning, setIsBeginning] = useState(true)
   const [isEnd, setIsEnd] = useState(false)
 
+  // Scroll al top cuando se monta el componente (sin animación)
+  useEffect(() => {
+    // Establecer directamente sin animación
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    window.scrollTo(0, 0)
+  }, [])
+
   // Función para actualizar el estado de las flechas
   const updateExternalArrows = useCallback(() => {
     if (swiperRef.current) {

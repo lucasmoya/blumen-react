@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './components/Home'
 import Habitaciones from './components/Habitaciones'
 import Entorno from './components/Entorno'
@@ -8,6 +9,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/habitaciones" element={<Habitaciones />} />

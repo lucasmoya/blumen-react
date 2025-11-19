@@ -12,6 +12,14 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true)
   const slideshowRef = useRef(null)
   
+  // Scroll al top cuando se monta el componente (sin animación)
+  useEffect(() => {
+    // Establecer directamente sin animación
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+    window.scrollTo(0, 0)
+  }, [])
+  
   // Inicializar slideshow después de que el componente se monte
   useEffect(() => {
     if (!isLoading) {
