@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flatpickr": "^4.6.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^6.20.0",
-    "flatpickr": "^4.6.13",
     "swiper": "^11.0.5"
   },
   "devDependencies": {
@@ -22,4 +23,3 @@
     "vite": "^5.0.8"
   }
 }
-

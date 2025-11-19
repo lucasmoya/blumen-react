@@ -5,6 +5,7 @@ import Header from './Header'
 import Footer from './Footer'
 import LoadingSpinner from './LoadingSpinner'
 import WhatsAppButton from './WhatsAppButton'
+import SEO from './SEO'
 import '../styles/rooms.css'
 
 const Habitaciones = () => {
@@ -122,6 +123,33 @@ const Habitaciones = () => {
 
   return (
     <>
+      <SEO
+        title="Blumen Hotel - Habitaciones | Hotel en Concón - Costa Brava con habitaciones con vista al mar, piscina y jacuzzi"
+        description="Descubre nuestras 12 habitaciones en Blumen Hotel, Concón. 8 habitaciones con vista al mar, todas con comodidades modernas. Reserva tu habitación en Costa Brava."
+        keywords="habitaciones hotel concón, habitaciones vista al mar concón, hotel con piscina costa brava, hotel con jacuzzi concón, hotel con sauna concón, habitaciones hotel boutique concón, reserva hotel concón, alojamiento vista al mar costa brava, habitaciones blumen hotel, hotel habitaciones costa brava"
+        canonical="https://www.blumenhotel.cl/habitaciones"
+        ogImage="https://www.blumenhotel.cl/habitaciones-page.jpg"
+        ogImageAlt="Habitaciones de Blumen Hotel en Concón"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Habitaciones - Blumen Hotel",
+          "description": "Descubre nuestras 12 habitaciones en Blumen Hotel, Concón. 8 habitaciones con vista al mar, todas con comodidades modernas.",
+          "url": "https://www.blumenhotel.cl/habitaciones",
+          "mainEntity": {
+            "@type": "Hotel",
+            "name": "Blumen Hotel",
+            "numberOfRooms": 12,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Las Pimpinelas 310",
+              "addressLocality": "Concón",
+              "addressRegion": "Valparaíso",
+              "addressCountry": "CL"
+            }
+          }
+        }}
+      />
       {isLoading && <LoadingSpinner />}
       <div id="main-content" style={{ opacity: isLoading ? 0 : 1 }}>
         <div className="hero">
@@ -258,6 +286,16 @@ const Habitaciones = () => {
       </div>
       
       <style>{`
+        #main-content {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+
+        .hero {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+
         .hero-background-slideshow {
           display: none !important;
         }

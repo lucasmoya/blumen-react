@@ -58,6 +58,125 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Blumen Hotel",
+      "description": "Hotel boutique en Concón, Costa Brava. 12 habitaciones con vista al mar, piscina, jacuzzi, sauna y cafetería con vista al océano.",
+      "url": "https://www.blumenhotel.cl",
+      "logo": "https://www.blumenhotel.cl/blumen-mobile.png",
+      "image": [
+        "https://www.blumenhotel.cl/background-index/1.jpg",
+        "https://www.blumenhotel.cl/background-index/2.jpg",
+        "https://www.blumenhotel.cl/background-index/3.jpg"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Las Pimpinelas 310",
+        "addressLocality": "Concón",
+        "addressRegion": "Valparaíso",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.0167,
+        "longitude": -71.5167
+      },
+      "telephone": "+56982161327",
+      "priceRange": "$$",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Piscina",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Jacuzzi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Sauna",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Sala de masajes",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Cafetería",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wi-Fi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vista al mar",
+          "value": true
+        }
+      ],
+      "numberOfRooms": 12,
+      "checkinTime": "15:00",
+      "checkoutTime": "12:00"
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Blumen Hotel",
+      "image": "https://www.blumenhotel.cl/blumen-mobile.png",
+      "@id": "https://www.blumenhotel.cl",
+      "url": "https://www.blumenhotel.cl",
+      "telephone": "+56982161327",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Las Pimpinelas 310",
+        "addressLocality": "Concón",
+        "addressRegion": "Valparaíso",
+        "postalCode": "",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.0167,
+        "longitude": -71.5167
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.instagram.com/blumen_hotel/",
+        "https://wa.me/56982161327"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -3,6 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import LoadingSpinner from './LoadingSpinner'
 import WhatsAppButton from './WhatsAppButton'
+import SEO from './SEO'
 
 const Entorno = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -45,6 +46,37 @@ const Entorno = () => {
 
   return (
     <>
+      <SEO
+        title="Blumen Hotel - Entorno | Hotel en Concón - Costa Brava con habitaciones con vista al mar, piscina y jacuzzi"
+        description="Conoce el entorno único de Blumen Hotel en Costa Brava, Concón. A 300m de la costanera, cerca de playas, dunas y restaurantes. Ubicación privilegiada con vista al mar."
+        keywords="hotel costa brava concón, hotel playa concón, hotel cerca del mar concón, ubicación hotel concón, hotel dunas concón, hotel playa amarilla, hotel concón centro, entorno hotel costa brava, hotel con vista al mar concón, hotel piscina costa brava, hotel jacuzzi concón, entorno blumen hotel"
+        canonical="https://www.blumenhotel.cl/entorno"
+        ogImage="https://www.blumenhotel.cl/entorno-page.jpg"
+        ogImageAlt="Entorno de Blumen Hotel en Costa Brava, Concón"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Entorno - Blumen Hotel",
+          "description": "Conoce el entorno único de Blumen Hotel en Costa Brava, Concón. A 300m de la costanera, cerca de playas, dunas y restaurantes.",
+          "url": "https://www.blumenhotel.cl/entorno",
+          "mainEntity": {
+            "@type": "Hotel",
+            "name": "Blumen Hotel",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Las Pimpinelas 310",
+              "addressLocality": "Concón",
+              "addressRegion": "Valparaíso",
+              "addressCountry": "CL"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -33.0167,
+              "longitude": -71.5167
+            }
+          }
+        }}
+      />
       {isLoading && <LoadingSpinner />}
       <div id="main-content" style={{ opacity: isLoading ? 0 : 1 }}>
         <div className="hero">
@@ -100,6 +132,16 @@ const Entorno = () => {
       </div>
       
       <style>{`
+        #main-content {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+
+        .hero {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+        }
+
         .hero-background-slideshow {
           display: none !important;
         }

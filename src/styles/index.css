@@ -121,6 +121,8 @@ button {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Slideshow de fondo */
@@ -360,13 +362,16 @@ nav {
     border: none;
     outline: none;
     background: transparent;
-    font-family: inherit;
-    font-size: 14px;
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-size: 16px; /* Mínimo 16px para evitar zoom automático en iOS */
+    font-weight: 400;
     color: white;
 }
 
 .search-input input::placeholder {
     color: rgba(255, 255, 255, 0.6);
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 400;
 }
 
 .search-actions {
@@ -380,7 +385,11 @@ nav {
     color: white;
     padding: 10px;
     border-radius: 4px;
-    font-weight: 500;
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: background-color 0.3s;
 }
 
@@ -723,11 +732,13 @@ nav {
     font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
     font-weight: 600;
     margin-bottom: 8px;
+    text-align: justify;
 }
 
 .info-text p {
     color: #6c6c6c;
     font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+    text-align: justify;
 }
 
 .info-map {
@@ -1034,6 +1045,11 @@ footer {
 
     .search-actions {
         grid-column: 4;
+    }
+
+    /* En desktop, podemos reducir el tamaño de fuente de los inputs si es necesario */
+    .search-input input, .search-input select {
+        font-size: 14px;
     }
 
     .room-card {
