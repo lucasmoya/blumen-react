@@ -1,6 +1,13 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/carta",
+      "destination": "https://app.menuo.cl/blumenhotel",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
